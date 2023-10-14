@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/login_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/background" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/login_logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="109dp"
+            app:srcCompat="@drawable/logo" />
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:text="Log In"
+            android:layout_below="@id/login_logo"
+            android:textAlignment="center"
+            android:textSize="35sp"/>
+
+        <EditText
+            android:id="@+id/signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="15dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/edittext_background"
+            android:textSize="17sp"
+            android:hint="Email"
+            android:drawableStart="@drawable/email_art"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"
+
+            android:layout_below="@+id/login_logo"
+            android:layout_marginTop="80dp"
+            android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/signup_password"
+            android:layout_width="match_parent"
+            android:background="@drawable/edittext_background"
+            android:layout_height="50dp"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
+            android:hint="Password"
+            android:drawableStart="@drawable/password_art"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/signup_email"/>
+        <TextView
+            android:id="@+id/login_forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textStyle="bold"
+
+            android:textColor="@color/black"
+            android:layout_below="@id/signup_password"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/signup_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="LOG IN"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/login_forgot"
+            android:layout_marginTop="10dp"
+
+            />
+        <TextView
+            android:id="@+id/login_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have account ? Sign Up!"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_below="@id/signup_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+
+            />
+        <View
+            android:id="@+id/login_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/login_create"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/login_line"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="30dp"
+                android:src="@drawable/common_google_signin_btn_icon_light"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="30dp"
+                android:src="@drawable/common_google_signin_btn_text_dark"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/login_pb"
+        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
