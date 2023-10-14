@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/background" />
+        app:srcCompat="@drawable/background" />
 
 
     <RelativeLayout
@@ -33,13 +33,14 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="80dp"
+            android:transitionName="logo_transition"
             android:layout_marginEnd="109dp"
             app:srcCompat="@drawable/logo" />
         <TextView
             android:id="@+id/login_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:transitionName="text_transition"
             android:layout_marginTop="5dp"
             android:textStyle="bold"
             android:text="Log In"
@@ -48,7 +49,7 @@
             android:textSize="35sp"/>
 
         <EditText
-            android:id="@+id/signup_email"
+            android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:paddingStart="15dp"
@@ -65,12 +66,13 @@
             android:layout_marginTop="80dp"
             android:inputType="textEmailAddress" />
         <EditText
-            android:id="@+id/signup_password"
+            android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:background="@drawable/edittext_background"
             android:layout_height="50dp"
             android:drawablePadding="10dp"
             android:textSize="17sp"
+            android:inputType="textPassword"
             android:paddingStart="15dp"
             android:textColor="@color/black"
             android:hint="Password"
@@ -78,7 +80,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/signup_email"/>
+            android:layout_below="@id/login_email"/>
         <TextView
             android:id="@+id/login_forgot"
             android:layout_width="wrap_content"
@@ -87,12 +89,12 @@
             android:textStyle="bold"
 
             android:textColor="@color/black"
-            android:layout_below="@id/signup_password"
+            android:layout_below="@id/login_password"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="40dp"
             android:layout_marginTop="5dp"/>
         <Button
-            android:id="@+id/signup_btn"
+            android:id="@+id/login_btn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="LOG IN"
@@ -110,7 +112,7 @@
             android:textColor="@color/black"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:layout_below="@id/signup_btn"
+            android:layout_below="@id/login_btn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
 
